@@ -4,10 +4,7 @@ import './App.css';
 import Catagories from './components/Catagories';
 import News from './components/News';
 import axios from 'axios';
-// import CategoryAdd from './components/CategoryAdd';
 function App() {
-  // const [categories, setCategories] = useState([{category:"TechCrunch",api:""}])
-  // const [addCatTog, setAddCatTog] = useState(false)
   const [news, setNews] = useState([])
   const [search, setSearch] = useState('')
   const [searchText, setSearchText] = useState('')
@@ -31,7 +28,6 @@ function App() {
     setSearchText('')
     await axios.get(n.api+'&apiKey=a5cf886a8dd84801a01c8b5bd0da1b0d')
     .then(res=>{
-      // console.log(res.data);
       setNews(res.data.articles);
     })
   }
@@ -56,9 +52,7 @@ function App() {
         <Catagories loadNews={n=>newsLoad(n)} />
 
         {/* category add section */}
-        {/* {
-          addCatTog?<CategoryAdd addCategory = {category =>setCategories([...categories,category])}/>:""
-        } */}
+        
         
 
         {/* search box */}

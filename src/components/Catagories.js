@@ -3,9 +3,7 @@ import CategoryAdd from './CategoryAdd';
 function Catagories(props) {
     const [categories, setCategories] = useState([{category:"TechCrunch",api:"https://newsapi.org/v2/top-headlines?category=technology"}])
     const [addCatTog, setAddCatTog] = useState(false)
-    // console.log(props.categories);
     if(addCatTog){
-      // console.log(document.querySelector('.App'));
       document.querySelector('.App').disabled=true
     }
     function addCat(category){
@@ -37,7 +35,6 @@ function Catagories(props) {
 
           {/* category add section */}
           {
-            // addCatTog?<CategoryAdd addCategory = {category =>setCategories([...categories,category])}/>:""
             addCatTog?<CategoryAdd addCategory = {category =>addCat(category)}/>:""
           }
           {
