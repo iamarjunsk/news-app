@@ -1,6 +1,94 @@
-.App {
-  text-align: center;
+body{
+  height: 100%
 }
+.App {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(243, 239, 239, 0.856);
+  min-height: 100vh;
+  height: auto;
+}
+.container{
+  width: 42rem;
+  padding-top: 1.5rem;
+}
+h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.category{
+  border-radius: 50px;
+  width: fit-content;
+  text-align: center;
+  font-size: 13px;
+  padding-left: 9px;
+  padding-top: 5px;
+  padding-right: 9px;
+  padding-bottom: 5px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(187, 182, 182);
+}
+.active{
+  background-color: #12d3b9;
+  text-decoration: none;
+}
+.non-active{
+  background-color: rgb(214, 206, 206);
+}
+.button{
+  border: none;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right:15px;
+
+  background-color: rgb(187, 182, 182);
+}
+.searchbox-container{
+  margin-top: 20px;
+  /* border-style: ridge; */
+  display: flex;
+  padding: 0;
+  align-items: center;
+  border-radius: 50px;
+  padding-left: 8px;
+  background-color: #fff;
+}
+.searchbox-container form{
+  width: 95%;
+}
+.shadow{
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.45);
+}
+.search{
+  border: none;
+  flex: 3;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+}
+.search:focus{
+  outline: none;
+}
+.search::placeholder{
+  color: #d1dadd;
+}
+
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.45);
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -11,17 +99,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -35,4 +112,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .App{
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
 }
