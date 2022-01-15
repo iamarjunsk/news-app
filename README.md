@@ -9,3 +9,8 @@ https://iamarjunsk.github.io/news-app/
 due to https://newsapi.org latest update free apikey is only work on localhost
 ## Source code
 https://github.com/iamarjunsk/news-app
+
+### Run on localhost
+cd /to/the/path
+npm install
+npm start
